@@ -63,7 +63,7 @@ class User(object):
         blog.save_to_mongo()
 
     @staticmethod
-    def new_post(blog_id,title, content, created_date=datetime.datetime.utcnow()):
+    def new_post(blog_id, title, content, created_date=datetime.datetime.utcnow()):
         blog = Blog.from_mongo(blog_id)
         blog.new_post(title=title,
                       content=content,
@@ -78,3 +78,14 @@ class User(object):
 
     def save_to_mongo(self):
         Database.insert('users', self.json())
+
+
+# Database.initialize()
+#
+# user = User.get_by_email('test@test.com')
+# print(user.email)
+#
+# user.get_blogs()
+# blog = Blog.from_mongo("ceec0bf855ef42c09e79e519de46d955")
+# user.get_blogs()
+# print(blog)
