@@ -31,7 +31,7 @@ class User(object):
         if user is None:
             new_user = cls(email, password)
             new_user.save_to_mongo()
-            session['emial'] = email
+            session['email'] = email
             return True
         else:
             print("User already exists!")
