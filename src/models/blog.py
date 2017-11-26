@@ -47,5 +47,11 @@ class Blog(object):
     @classmethod
     def find_by_author_id(cls, author_id):
         blogs_data = Database.find(collection='blogs',
-                                       query={'author_id': author_id})
+                                   query={'author_id': author_id})
         return [cls(**blog) for blog in blogs_data]
+
+
+        # Database.initialize()
+        # blog = Blog.from_mongo("ff2a26f755c54589b53e1b2d36b3a436")
+        # blog.new_post("First post", "No content!")
+        # blog.new_post("Second post", "No content!")
