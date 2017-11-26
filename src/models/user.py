@@ -84,7 +84,7 @@ class User(object):
 #
 # user = User.get_by_email('test@test.com')
 # print(user.email)
-#
+# user.new_blog("Stupid Blog","A very stupid blog")
 # user.get_blogs()
 # blog = Blog.from_mongo("ceec0bf855ef42c09e79e519de46d955")
 # user.get_blogs()
